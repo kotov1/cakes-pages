@@ -1,0 +1,25 @@
+{
+  "name": "starttemplate",
+  "description": "optimized start template",
+  "main": "index.js",
+  "authors": [
+    "PP"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/kotov1/Start-Template",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "masonry": "masonry-layout#^4.2.0"
+  },
+  "devDependencies": {
+    "bootstrap": "v4.0.0-beta"
+  }
+}
