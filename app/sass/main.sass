@@ -1,8 +1,9 @@
+/*================================== MAIN.CSS ===================================*/
 @import "fonts"
 @import "libs"
 @import "vars"
 
-// ==================== GENERAL STYLES START====================
+/* ==================== GENERAL STYLES START ==================== */
 *
 	-webkit-box-sizing: border-box
 	-moz-box-sizing: border-box
@@ -52,154 +53,125 @@ body
 	display: block
 	max-width: 100%
 	height: auto
+/* ==================== GENERAL STYLES END ==================== */
 
 
+/*========== HEADER START ==========*/
+header
+	opacity: .9
+	position: absolute
+	width: 100%
+	z-index: 2
 
-// PP start
-.breadcrumb_wrap //хлебные крошки
-	padding: 1.7em 0 .7em
-	
-	.breadcrumb
-		margin: 0
-		padding: 0
-		list-style-type: none
-		
-		li
-			display: inline-block
-		a
-			font: .875em/.9375 'IskraCYR-Regular', sans-serif  //14px/15px
-			color: #858585 
-			text-decoration: underline
-			&:hover
-				text-decoration: none
-			
-		.breadcrumb_segment-separator
-			display: inline-block
-			padding: 0 .5em // 0 8px
-			font-size: 0.8em
-// PP end
+.header-bottom
+	background-color: #e6e6e6
+	.main-menu
+		text-align: left
+		ul
+			padding: 0
+			margin: 0
+			.dropdown-menu
+				display: none
+				width: 100%
+				padding: 10px 0
+				position: absolute
+				z-index: 3
+				background-color: #e6e6e6
+				li
+					display: block
+					a
+						font-size: 1.5rem
+						display: block
+						padding-left: 20px
+			li
+				display: inline-block
+				padding: 25px 20px 20px
+				a
+					color: #636363
+					font-size: 1em
+					&:hover
+						text-decoration: none
+				.drop-m
+					border: 2px solid red
+				.icon
+					width: 30px
+					height: 30px
+					margin-top: 1px
+					margin-right: 10px
+					display: block
+					float: left
+					background-repeat: no-repeat
+				&:nth-child(1) .icon
+					background-image: url(../img/menu-icon1.png)
+				&:nth-child(2) .icon
+					background-image: url(../img/menu-icon2.png)
+				&:nth-child(3) .icon
+					background-image: url(../img/menu-icon3.png)
+				&:nth-child(4) .icon
+					background-image: url(../img/menu-icon4.png)
+				&:nth-child(5) .icon
+					background-image: url(../img/menu-icon5.png)
+				&:nth-child(6) .icon
+					background-image: url(../img/menu-icon6.png)
+/*========== HEADER END ==========*/
 
-// ===================== GENERAL STYLES END =====================
 
+/*========== MAIN SLIDER START ==========*/
 
-
-// ========================== HEADER START ==========================
-
-// ========================== HEADER END ==========================
-
-//PP start
-
-.content_wrap
-	max-width: 1190px
-	margin: 0 auto
-	 
-body.blog
-	.container
-		padding-left: 0
-		padding-right: 0
-
-	h2
-		margin-bottom: .7em
-		font: 3em/1.25em 'IskraCYR-Thin', sans-serif //48px/20px
-		letter-spacing: -1px
-		color: #636363 
-		
-	.page_head
+.slider_main
+	.slider_item
 		position: relative
-		border-top-left-radius: 5px
-		border-top-right-radius: 5px
-		background-color: #FFF 
-		box-shadow: 0px -35px 30px 3px rgba(0,0,0,.1)
-
-
-// ========================== SECTION START ==========================
-
-.companyBlog
-	padding-bottom: 50px
-	
-	.companyBlog_link
-		text-decoration: none
-		color: rgba(99, 99, 99,.8)
-		
-	.companyBlog_post 
-		width: 31.5%
-		margin-bottom: 35px 
-		&:hover
-			box-shadow: 120px 120px 15px -120px rgba(0,0,0,.1)
-
-	.companyBlog_img
-		overflow: hidden
-		border-radius: 5px
-		img
-			position: relative
-			
-		img[src*="trends"]
-			left: -30px 
-			
-		img[src*="capcakes"]
-			left: -133px 
-		
-	.companyBlog_info
-		margin: .4em 0 .6em 
-		font: 1em/.9375 'IskraCYR-Regular', sans-serif  //16px/15px
-		.companyBlog_info-sep
-			display: inline-block
-			width: 7px
-			height: 25px 
-			margin: 0 1em
-			background: url(../img/separator.png) no-repeat
-			position: relative
-			top: 7px
-	h3
-		font: 1.5em/.9375 'IskraCYR-Regular', sans-serif //24px /15px
-		letter-spacing: -1px
-		background: url(../img/h3_border-bottom.png) no-repeat
-		background-position: 0 100%
-		padding: 5px 0 23px 0 
-		
-	.companyBlog_text, a.details
-		margin-top: 20px
-		font: .875em 'MuseoSansCyrl-500', sans-serif 
-		
-	a.details
-		color: #91B000 
-		text-decoration: underline
-		&:hover
-			text-decoration: none
-			
-	a.more
-		display: inline-block
-		width: 80px
-		height: 80px
-		transform: translateX(-50%)
-		position: relative
+	.slider_content
+		position: absolute
+		top: 50%
 		left: 50%
-		border: 1px solid rgba(114, 114, 114,.7)
-		border-radius: 50%
-		text-decoration: none
+		transform: translate(-50%,-50%)
 		text-align: center
-		line-height: 1 
-		opacity: 0.8
 		
-		.more_pic
-			display: block
-			width: 16px
-			height: 20px
-			background: url(../img/more_pic.png) no-repeat
-			margin: 10px auto 0
-		
-		span:last-child
-			font: .75em 'MuseoSansCyrl-500', sans-serif  //12px
-			color: #727272
-			border-bottom: 1px dashed currentColor 
-			
-		&:hover
-			span
-				border-bottom: none
+		h1
+			font: 11.975em/1 'VeryBerryPro-Regular', sans-serif
+			color: #FFF
+			&::selection
+				color: #777
+				background: #999
 				
-// ========================== SECTION END ==========================
+	.img-separator
+		position: relative
+		
+		&:before, &:after
+			content: ""
+			display: inline-block
+			height: 1px
+			width: 260px 
+			position: absolute
+			left: 0
+			top: 50%
+			background-color: #FFF 
+			content: ""
+			display: inline-block
+			height: 1px
+			width: 260px 
+			position: absolute
+			left: 0
+			top: 50%
+			background-color: #FFF 
+			
+		&:after
+			left: auto
+			right: 0
+	
+	.slider_descr
+		padding: 0 30px 
+		display: flex
+		span
+			&:first-child
+				font: 1.25em 'IskraCYR-Regular', sans-serif
+				color: #FFF 
 
-//PP end
+ 
+
+
+/*========== MAIN SLIDER END ==========*/
 
 
 
@@ -212,8 +184,5 @@ body.blog
 
 
 
-
-
-
-//MEDIA QUARIES
-@import "media"
+/* MEDIA QUARIES */
+@import "blog"
