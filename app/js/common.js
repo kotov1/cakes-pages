@@ -7,4 +7,22 @@ $(function() {
 		gutter: 30
 	});
 
+
+	$(".slider").slick({
+		// normal options...
+		infinite: true,
+		arrows: true,
+		autoplay: true,
+		autoplaySpeed: 5000,
+		responsive: [{
+
+		breakpoint: 576,
+			settings: {
+			adaptiveHeight: true,
+			arrows: false
+			}
+
+		}]
+	});
+
 });

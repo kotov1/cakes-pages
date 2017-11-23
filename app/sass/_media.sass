@@ -9,15 +9,11 @@
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
 
-	//PP start
-	.companyBlog 
-		.companyBlog_post
-			width: 30%
-		.companyBlog_img
-			img
-				position: static
-	//PP end
-
+	.shop
+		.shop_heading
+			h2
+				&:before, &:after
+					width: 14%
 
 
 
@@ -50,15 +46,41 @@
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
 
-
-	//PP start
-	body.blog
-		.container
-			padding-left: 15px
-			padding-right: 15px
-	.companyBlog .companyBlog_post
-		width: 47.5%
-	//PP end
+	header
+		position: static
+		
+	.slider_main 
+		.slider_img 
+			img
+				top: 0
+				
+		.slider_content
+			top: 55%
+			
+	.slick-arrow.slick-next, .slick-arrow.slick-prev
+		top: 58%
+		transform: scale(.8) 
+		
+		
+	.shop
+		.shop_heading
+			h2
+				padding-bottom: 15px
+				&:before
+					display: none
+				&:after
+					top: auto
+					bottom: 0
+					left: 50%
+					transform: translateX(-50%)
+					width: 50%
+			p
+				&:first-of-type
+					font-size: 1.2em
+					line-height: 1.4 
+				&:last-child
+					font-size: 1em  
+					line-height: 1.4 
 
 
 
@@ -92,11 +114,34 @@
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 
-	//PP start
-	.companyBlog .companyBlog_post
-		width: 100%
-	//PP end
 
+	.slider_main 
+		.slider_img
+			img
+				max-width: 135%
+				width: 135% 
+				left: -15%
+		.slider_content 
+			width: 90%
+			h1
+				text-align: center
+				font-size: 8em
+		.img-separator
+			&:before, &:after 
+				width: 33%
+		.slider_descr
+			display: block
+			span
+				&:first-child
+					display: block
+					text-align: center
+				&.separator
+					display: none
+			.descr_btn
+				margin-top: 20px
+				padding: 20px 
+		.scrollDown
+			margin-top: 30px
 
 
 
@@ -128,8 +173,22 @@
 /* Extra small Devices */
 @media only screen and (max-width : 576px)
 
-
-
+		
+	.slider_main 
+		.slider_item
+			height: 500px
+		.slider_img
+			img
+				max-width: 150%
+				width: 150% 
+				// left: -15%
+		.slider_content 
+			h1
+				font-size: 5em
+		.slider_descr
+			span
+				&:first-child
+					font-size: 1em //16px 
 
 
 
@@ -162,13 +221,12 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 
-	//PP start
-	.blog h2
-		line-height: 1em
-		
-	.companyBlog .companyBlog_post
-		text-align: center
-	//PP end
+	.slider_main 
+		.slider_img
+			img
+				max-width: 250%
+				width: 250% 
+				left: -50%
 
 
 

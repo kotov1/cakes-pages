@@ -58,13 +58,21 @@ body
 
 /*========== HEADER START ==========*/
 header
-	opacity: .9
+	background-color: transparent 
 	position: absolute
 	width: 100%
 	z-index: 2
 
 .header-bottom
+	height: 85px
 	background-color: #e6e6e6
+	opacity: 0.9
+	width: 100%
+	position: absolute
+	bottom: -85px
+	left: 50%
+	transform: translateX(-50%)
+	
 	.main-menu
 		text-align: left
 		ul
@@ -85,7 +93,7 @@ header
 						padding-left: 20px
 			li
 				display: inline-block
-				padding: 25px 20px 20px
+				padding: 30px 20px 20px
 				a
 					color: #636363
 					font-size: 1em
@@ -119,17 +127,31 @@ header
 /*========== MAIN SLIDER START ==========*/
 
 .slider_main
+
 	.slider_item
 		position: relative
+		max-height: 800px
+		overflow: hidden
+		
+		
+	.slider_img
+		img
+			position: relative
+			top: 55px
+			left: -4%
+			max-width: 111%
+			width: 111% 
+
 	.slider_content
 		position: absolute
-		top: 50%
+		top: 66%
 		left: 50%
 		transform: translate(-50%,-50%)
 		text-align: center
+		min-width: 53% /*for IE*/
 		
 		h1
-			font: 11.975em/1 'VeryBerryPro-Regular', sans-serif
+			font: 11.975em/.8 'VeryBerryPro-Regular', sans-serif
 			color: #FFF
 			&::selection
 				color: #777
@@ -137,6 +159,9 @@ header
 				
 	.img-separator
 		position: relative
+		margin-top: 10px
+		img
+			display: inline
 		
 		&:before, &:after
 			content: ""
@@ -153,7 +178,7 @@ header
 			width: 260px 
 			position: absolute
 			left: 0
-			top: 50%
+			top: 63%
 			background-color: #FFF 
 			
 		&:after
@@ -161,18 +186,159 @@ header
 			right: 0
 	
 	.slider_descr
+		margin-top: 25px
 		padding: 0 30px 
 		display: flex
+		justify-content: center
+		
 		span
 			&:first-child
 				font: 1.25em 'IskraCYR-Regular', sans-serif
-				color: #FFF 
+				color: #FFF
+				text-align: right
+				span
+					display: inline-block
+					width: 12px
+				
+			&.separator
+				margin-right: 17px
+				background: url(../img/slider_main-sep.png) no-repeat
+				// background-size: 100%
+				width: 30px
+				height: 57px 
+				// position: relative
+				// top: -10px 
+				
+		.descr_btn
+			display: inline-block
+			padding: 0 1.25em //0 20px 
+			background: transparent url(../img/btn-border.png) no-repeat 50%
+			background-size: 100%
+			color: #FFF
+			font: 1em 'DaxlinePro-Regula', sans-serif
+			outline: none
+			border: none
+			cursor: pointer
+			
+			
+			&:active
+				transform: translate(1px, 1px) 
+				
+	.scrollDown
+		margin-top: 53px
+		a
+			display: block
+			position: relative
+			width: 64px
+			height: 64px
+			margin: 0 auto
+			&:after
+				content: ""
+				display: block
+				width: 100%
+				height: 100%
+				background: url(../img/scroll-down-link.png) no-repeat 50%
+				// transition: transform .9s
+				// &:hover
+				// 	transform: rotate(360deg)
+				// 	transition: transform .3s
+		span
+			display: inline-block
+			position: absolute
+			&:first-child
+				width: 13px
+				height: 8px
+				background: url(../img/arrow-down.png) no-repeat
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				
+			&:last-child
+				width: 10px
+				height: 15px
+				background: url(../img/comp-mouse.png) no-repeat
+				right: 7px
+				top: 5px
+				
 
- 
+.slick-arrow.slick-next, .slick-arrow.slick-prev
+	width: 70px
+	height: 70px
+	display: inline-block
+	background: url(../img/slider-arrows.png) no-repeat 0 0
+	top: 66%
+	z-index: 2 
+	&:before
+		display: none
+.slick-arrow.slick-next
+	right: 1%
+	background-position: -80px 0 
+	&:hover
+		background-position: -80px -80px 
+.slick-arrow.slick-prev
+	left: 1%
+	&:hover
+		background-position: 0 -80px 
 
-
+.slider_main
+	position: relative
+	&:after
+		content: ""
+		display: block
+		width: 100%
+		height: 10px
+		position: absolute
+		left: 0
+		bottom: 4px
+		background: url(../img/bottom-border.png) repeat-x  
+		
 /*========== MAIN SLIDER END ==========*/
 
+/*========== SECTION SHOP START ==========*/
+.shop
+	padding-top: 37px 
+	
+	.shop_heading
+		text-align: center
+		font-family: 'IskraCYR-Regula', sans-serif
+		color: #636363  
+		
+		h2
+			font: 3.5em/.9em 'VeryBerryPro-Regular', sans-serif // 56px/56px
+			letter-spacing: -1px 
+			font-weight: bold
+			position: relative
+			&:before, &:after
+				content: ""
+				display: inline-block
+				width: 18%
+				height: 6px
+				position: absolute
+				left: 0
+				top: 50%
+				background-image: url(../img/h2-graph.png)
+				background-position: 0 0 
+			&:after
+				left: auto
+				right: 0
+				 
+			span
+				font-size: .607em //34px
+				display: block
+		p
+			&:first-of-type
+				margin-top: 20px 
+				margin-bottom: 9px
+				padding-bottom: 11px 
+				font-size: 1.25em //20px
+				background: url(../img/underline.png) no-repeat
+				background-position: 0 100% 
+			&:last-child
+				font-size: 1.125em //18px
+				line-height: 1
+
+
+/*========== SECTION SHOP END ==========*/
 
 
 
@@ -181,8 +347,7 @@ header
 
 
 
-
-
+@import "blog"
 
 /* MEDIA QUARIES */
-@import "blog"
+@import "media"
