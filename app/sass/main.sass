@@ -337,6 +337,164 @@ header
 				font-size: 1.125em //18px
 				line-height: 1
 
+	.shop_cards
+		margin-top: 30px 
+		
+	.shop_card
+		// width: 32%
+		display: inline-block
+		border: 1px solid #d7d7d7
+		border-radius: 5px
+		background-color: #fff 
+		
+	.shop_card-link
+		text-decoration: none
+		color: inherit 
+			
+	.shop_card-post
+		color: rgba(99,99,99,.9)
+		
+		&:hover
+			box-shadow: 125px 125px 25px -125px rgba(0, 0, 0, 0.1)
+		h3
+			margin: .7em 0 0 0
+			font: 1.5em/.9375 'IskraCYR-Regular', sans-serif
+			&+span
+				font: 1em 'IskraCYR-Thin', sans-serif
+				font-weight: bold
+				
+	.shop_card-img
+		overflow: hidden
+		img
+			position: relative
+		
+		// img[src*="cake1"]
+		// 	left: -225px
+			// max-height: 275px
+			// width: 150%
+			// height: auto
+			// max-width: 200%
+			   
+
+		
+	.shop_card-content
+		padding: 0 10px
+					
+	.shop_card-text
+		margin-top: 10px
+		padding: 15px 0
+		font: .8em 'MuseoSansCyrl-500', sans-serif
+		display: flex
+		-webkit-align-items: center
+		align-items: center
+		position: relative
+		
+		&:after, &:before
+			content: ""
+			display: inline-block
+			width: 100%
+			height: 1px
+			position: absolute
+			left: 0
+			background: url(../img/underline.png) no-repeat
+			background-size: cover 
+			
+		&:after
+			top: 0
+		&:before
+			bottom: 0
+		
+		.svg-wrap
+		p
+			margin: 0 0 0 15px
+			.details
+				color: #91B000
+				text-decoration: underline
+				&:hover
+					text-decoration: none
+
+	.shop_card-info
+		padding: 10px 0
+		font-family: 'IskraCYR-Regular', sans-serif
+		display: flex
+		align-items: center
+		
+		.date
+			font-size: 1.5em //24px
+			span
+				font-size: .6666em
+		.item-weight
+			font-size: 1.125em //18px
+		.separator
+			display: inline-block
+			margin: 0 20px 
+			width: 7px
+			height: 25px
+			background: url(../img/text-separator.png) no-repeat 50% 
+			background-position: 0 3px 
+				
+		.rating
+			float: right
+			padding-top: 5px 
+			>
+				input
+					display: none
+				label:before
+					margin: 10px 2px
+					font-size: .8em
+					line-height: 1
+					font-family: 'FontAwesome'
+					display: inline-block
+					content: "\f005"
+				.half:before
+					content: "\f089"
+					position: absolute
+				label
+					color: #ddd
+					float: right
+					margin: 0
+				input:checked ~ label
+					color: #fea95e
+			&:not(:checked) > label:hover
+				color: #fea95e
+				~ label
+					color: #fea95e
+			>
+				input:checked
+					+ label:hover, ~ label:hover
+						color: #fea95e
+				label:hover ~ input:checked ~ label, input:checked ~ label:hover ~ label
+					color: #fea95e
+		
+.category
+	display: inline-block		
+	padding: 5px
+	border-radius: 5px 
+	height: auto
+	align-self: flex-start
+	
+.category-hits
+	background: #F6CCCC 
+	width: 64%	
+	
+.category-new
+	background: #E6F1B2 
+	width: 31%
+	
+.category-hot
+	// float: left
+	background: #FCEFCC 
+	width: 62%
+	.shop_card
+		width: 49%
+	
+.shop_cards
+	// display: flex
+	// flex-wrap: wrap
+	// align-content: flex-start
+	
+
+			
 
 /*========== SECTION SHOP END ==========*/
 
