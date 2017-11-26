@@ -14,7 +14,18 @@
 			h2
 				&:before, &:after
 					width: 14%
+		.shop_card-img 
+			img
+				max-width: 100% 
+			img[src*="pipe"]
+				left: 0
+		.shop_card-info
+			font-size: .9em 
 
+
+	.about
+		.slider_item
+			padding: 0 18%
 
 
 
@@ -81,8 +92,56 @@
 				&:last-child
 					font-size: 1em  
 					line-height: 1.4 
+					
+		.shop_card-img 
+			img[src*="cake1"]
+				top: 0
+
+		.shop_card-info
+			font-size: .7em 
+			.separator
+				margin: 0 5px 
+				
+	section.categories
+		.nav-block
+			background-image: url(../img/nav-block.jpg)
+			background-size: cover
+			background-position: center 
+			
+			span
+				color: #FFF 
 
 
+	.advantages
+		position: relative
+		height: auto
+		padding: 30px 0 
+		background-size: 100%
+		background-position: 0 0 
+		&:before
+			content: ""
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 0
+			display: block
+			width: 100%
+			height: 100%
+			background: rgba(0,0,0,.7)  
+		.advantages_content
+			margin: 0
+			flex-direction: column
+			justify-content: space-around
+		.advantages_logo
+			margin-top: 0
+			margin-bottom: 30px 
+		.advantages_list
+			width: 100%
+			margin-left: 0
+			li
+				margin-bottom: 40px 
+				&:after
+					display: none
 
 
 
@@ -143,11 +202,62 @@
 		.scrollDown
 			margin-top: 30px
 
+	.shop
+		.grid-sizer
+			width: 100%
+			float: none
+			
+		.category
+			width: 100%
+			
+		.category-hot
+			margin-bottom: 15px
+			.shop_card
+				width: 100%
+				
+		.category-new
+			.shop_card
+				&:first-child
+					&::before
+						transform: rotate(-90deg)
+						right: auto
+						left: -87px
+						transform-origin: 100% 0 0
+						
+		
+		.shop_card-info
+			font-size: 1em 
+			.separator
+				margin: 0 10px 
 
 
+	.bg-wrap
+		background-position: 0 120% 
 
+	.about
+		.svg-line
+			top: 0
+			background-size: cover
+			width: 95% 
+			
+		.slider_about
+			padding-left: 0
+			
+		.slider_item
+			padding: 0
+			
+		.slider_img
+			width: 50%
+			margin: 0 auto
 
-
+	.advantages
+		background-size: cover
+		
+		.advantages_content
+			display: block
+			
+		.advantages_logo
+			text-align: center
 
 
 
@@ -190,10 +300,31 @@
 				&:first-child
 					font-size: 1em //16px 
 
+	.bg-wrap
+		background-position: 0 100% 
+		background-size: 225%
+
+	.categories 
+		.colors
+			.nav-block
+				width: 80%
+				margin: 15px auto
+				
+	.about
+		.svg-line
+			max-width: 100% 
+			top: 0
+			background-size: cover
 
 
 
-
+	.advantages
+		.advantages_list
+			li
+				margin-bottom: 0
+				&:before
+					transform: scale(.7)
+					top: -6px
 
 
 
@@ -227,12 +358,60 @@
 				max-width: 250%
 				width: 250% 
 				left: -50%
+		.scrollDown 
+			a
+				width: 50px
+				height: 50px
+				&:after
+					background-size: cover
+	.shop
+		padding-left: 2px
+		padding-right: 2px   
+		.shop_heading 
+			h2
+				font-size: 3em 
+			p
+				&:last-child
+					font-size: 0.9em
+		.shop_card-heading
+			text-align: center
+		.shop_card-text 
+			p
+				margin-left: 10px 
+		.shop_card-info
+			justify-content: center
+			font-size: .8em 
+			.separator
+				margin: 0 5px 
+				
+
+	.categories 
+		.colors
+			.nav-block
+				width: 100%
 
 
+	.about
+		h2
+			font-size: 2.5em
+			line-height: 1
+			margin-top: 20px 
+		.slider_item
+
+		.slider_img
+			width: 80%
 
 
-
-
+	.advantages
+		.advantages_logo
+			margin-bottom: 50px
+		.advantages_list
+			li
+				margin-bottom: 30px
+				padding-left: 0
+				text-align: center
+				&:before
+					display: none
 
 
 
