@@ -1,16 +1,16 @@
+
+
+
+
+
+
+
+/*====================== Наши скрипты =============================*/
+
 $(function() {
 
-
-
-	$('.companyBlog_wrap').masonry({
-		itemSelector: '.companyBlog_post',
-		gutter: 30
-	});
-
-
-
+	//Верхний слайдер главной страницы
 	$(".slider_main").slick({
-		// normal options...
 		infinite: true,
 		arrows: true,
 		autoplay: true,
@@ -26,10 +26,12 @@ $(function() {
 		}]
 	});
 
+
+	//Слайдер в секции отзывы главной страницы
 	$(".slider_about").slick({
 		infinite: true,
 		arrows: true,
-		// autoplay: true,
+		autoplay: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		autoplaySpeed: 5000,
@@ -62,12 +64,34 @@ $(function() {
 	});
 
 
-	//Плавный скролл к якорю
+	//Плавный скролл к якорю секции интернет магазин тортов 
 	$(".scrollDown").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
 		top = $(id).offset().top;
 		$('body,html').animate({scrollTop: top}, 500);
+	});
+
+
+	/*появление меню по клику на крестик*//////////////////////////
+
+	$(".toggleMenu").click(function() {
+		$(this).toggleClass("on");
+		$("#head__menu").slideToggle();
+		$("#head__menu a").click(function() {
+			$("#head__menu").css("display", "none");
+			$(".toggleMenu").removeClass("on");
+		}); 
+		return false;
+	});
+
+	/*появление меню по клику на крестик*//////////////////////////
+
+	/*masonry на странице Блог*/
+	/* https://masonry.desandro.com */
+	$('.companyBlog_wrap').masonry({
+		itemSelector: '.companyBlog_post',
+		gutter: 30
 	});
 
 

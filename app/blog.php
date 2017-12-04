@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Oh, my cake</title>
+	<title>Title</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,15 +25,21 @@
 	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
 
 	<style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
-	
+<link rel="stylesheet" href="libs/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 </head>
 
 <body class="blog"> <!-- ATTENTION!!!!!!!! -->
 
+
 <!-- =====================================
 HEADER START
 ===================================== -->
-<header style="height: 165px; background-color: #444"></header>
+
+<!-- =====================================
+HEADER START
+===================================== -->
+<?php include("blocks/header.php");?>
 <!-- =====================================
 HEADER END
 ===================================== -->
@@ -44,7 +50,7 @@ HEADER END
 		<div class="container">
 			<div class="page_head-cont">
 				<!-- breadcrumbs start -->
-				<div class="row">
+				<div class="row no-gutters">
 					<div class="col-12">
 						<div class="breadcrumb_wrap">
 							<ul class="breadcrumb">
@@ -56,7 +62,7 @@ HEADER END
 					</div>
 				</div>
 				<!-- breadcrumbs end -->
-				<div class="row">
+				<div class="row no-gutters">
 					<div class="col-12">
 						<h2>Блог компании</h2>
 					</div>
@@ -64,16 +70,16 @@ HEADER END
 			</div>
 		</div>
 	</div>
-	
-	
+
+
 	<!-- =====================================
 	BLOG START
 	===================================== -->
 	<section class="companyBlog">
 		<div class="container">
-	
+
 			<div class="companyBlog_wrap">
-				
+
 				<!-- 1 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -88,7 +94,7 @@ HEADER END
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 				<!-- 2 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -103,7 +109,7 @@ HEADER END
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 				<!-- 3 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -118,7 +124,7 @@ HEADER END
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 				<!-- 4 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -133,7 +139,7 @@ HEADER END
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 				<!-- 5 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -148,7 +154,7 @@ HEADER END
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 				<!-- 6 -->
 				<a href="#" class="companyBlog_link">
 					<div class="companyBlog_post">
@@ -159,18 +165,18 @@ HEADER END
 							<span class="comments"><i class="fa fa-comments-o" aria-hidden="true"></i> 486</span>
 						</div>
 						<h3>Пасхальный фестиваль с гигантским куличом пройдет в Москве</h3>
-						
+
 						<p class="companyBlog_text">В Москве в период с 10 по 19 апреля состоится фестиваль «Пасхальный дар».</p>
 						<p class="companyBlog_text">Он развернется на восемнадцати площадках в центре столицы.</p>
 						<p class="companyBlog_text">В период Пасхальной недели жители Москвы и ее гости смогут отведать большой кулич, который будет испечен мастерами по старинному русскому рецепту</p>
-						
+
 						<a class="details" href="#">Подробнее</a>
 					</div>
 				</a>
-	
+
 			</div> <!-- / companyBlog_wrap -->
-	
-			<div class="row">
+
+			<div class="row no-gutters">
 				<div class="col-12"><a href="#" class="more"><span class="more_pic"></span><span>Показать ещё</span></a></div>
 			</div>
 
@@ -186,20 +192,13 @@ HEADER END
 <!-- =====================================
 FOOTER START
 ===================================== -->
-<footer style="height: 125px; background-color: #364752"></footer>
+<?php include("blocks/footer.php");?>
 <!-- =====================================
 FOOTER END
 ===================================== -->
 
-
-	
-
-
-
-
-
-	<link rel="stylesheet" href="css/main.min.css">
-	<script src="js/scripts.min.js"></script>
+<link rel="stylesheet" href="css/main.css">
+<script src="js/scripts.min.js"></script>
 
 </body>
 </html>

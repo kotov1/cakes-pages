@@ -15,21 +15,22 @@ var		gulp 			= require('gulp'),
 		rsync 			= require('gulp-rsync');
 
 
-gulp.task('common-js', function() {
-	return gulp.src([
-		'app/js/common.js',
-		])
-	.pipe(concat('common.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('app/js'));
-});
+// gulp.task('common-js', function() {
+// 	return gulp.src([
+// 		'app/js/common.js',
+// 		])
+// 	.pipe(concat('common.min.js'))
+// 	.pipe(uglify())
+// 	.pipe(gulp.dest('app/js'));
+// });
 
-gulp.task('js', ['common-js'], function() {
+gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/masonry/dist/masonry.pkgd.js',
 		'app/libs/slick-carousel/slick/slick.js',
-		'app/js/common.min.js'
+		'app/js/common.js'
+		// 'app/js/common.min.js'
 		])
 	.pipe(concat('scripts.min.js'))
 	// .pipe(uglify())
@@ -40,8 +41,8 @@ gulp.task('js', ['common-js'], function() {
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: 'app',
-			index: 'main.html'
+			baseDir: 'app'
+			// index: 'main.html'
 		},
 		notify: false,
 		// tunnel: true,
