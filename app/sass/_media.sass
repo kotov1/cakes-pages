@@ -8,13 +8,24 @@
 			h2
 				&:before, &:after
 					width: 14%
+		.category-new
+			padding-bottom: 5px
+			div[class*="col"] 
+				.shop_card-wrap
+					margin-bottom: 28px
 		.shop_card-img
 			img
 				max-width: 100%
 			img[src*="pipe"]
 				left: 0
+			img[src*="kruassan"]
+				width: auto
+		.shop_card-text
+			min-height: 75px
 		.shop_card-info
 			font-size: .9em
+			.separator
+				margin: 0 10px
 
 
 	.about
@@ -86,6 +97,23 @@
 				&:last-child
 					font-size: 1em
 					line-height: 1.4
+		.category-new
+			margin-left: 0
+			.shop_card-wrap
+				min-height: 100%
+			div[class*="col"]
+				&:first-child 
+					.shop_card-wrap
+						margin-bottom: 0
+					.shop_card
+						&::before
+							right: auto
+							left: -103px
+							transform: rotate(-90deg)
+							transform-origin: 100% 0 0
+				&:last-child
+					.shop_card-wrap
+						margin-bottom: 0
 
 		.shop_card-img
 			img[src*="cake1"]
@@ -203,26 +231,39 @@
 
 		.category
 			width: 100%
-
-		.category-hot
-			margin-bottom: 15px
+			min-height: auto
+			.shop_card-wrap
+				margin-bottom: 15px !important 
+			div[class*="col"]:last-child 
+				.shop_card-wrap
+					margin-bottom: 0 !important 
 			.shop_card
-				width: 100%
+				&:hover
+					width: 100% !important
+					left: 0px !important
+			.shop_card-info 
+				.separator
+					margin: 0 15px
 
-		.category-new
-			.shop_card
-				&:first-child
-					&::before
-						transform: rotate(-90deg)
-						right: auto
-						left: -87px
-						transform-origin: 100% 0 0
-
-
+		.shop_card-img 
+			img
+				width: 100% !important
+			img[src*="cake1"]
+				top: 0
+			img[src*="pipe"]
+				left: 0 !important
+			img[src*="capcake"]
+				left: 0
 		.shop_card-info
+			justify-content: flex-start
 			font-size: 1em
 			.separator
 				margin: 0 10px
+		.button-and-like 
+			.myButton-favourite 
+				padding: 6.8px 5px !important
+				i
+					left: 1px
 
 
 	.bg-wrap
@@ -367,16 +408,17 @@
 			p
 				&:last-child
 					font-size: 0.9em
-		.shop_card-heading
-			text-align: center
-		.shop_card-text
-			p
-				margin-left: 10px
-		.shop_card-info
-			justify-content: center
-			font-size: .8em
-			.separator
-				margin: 0 5px
+		.category
+			.shop_card-heading
+				text-align: center
+			.shop_card-text
+				p
+					margin-left: 10px
+			.shop_card-info
+				justify-content: space-around
+				font-size: .8em
+				.separator
+					margin: 0 5px
 
 
 	.categories
