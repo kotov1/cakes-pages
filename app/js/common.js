@@ -27,9 +27,9 @@ $(function() {
 	});
 
 	//отмена действия ссылок по умолчанию
-	$('a.shop_card-link').on('click', function(e) {
-			e.preventDefault();
-		});
+	// $('a.shop_card-link').on('click', function(e) {
+	// 		e.preventDefault();
+	// 	});
 	
 
 

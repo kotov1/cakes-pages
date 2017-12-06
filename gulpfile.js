@@ -26,13 +26,12 @@ var		gulp 			= require('gulp'),
 
 gulp.task('js', function() {
 	return gulp.src([
-		'app/libs/jquery/dist/jquery.min.js',
+		'app/libs/jquery/dist/jquery.js',
 		'app/libs/masonry/dist/masonry.pkgd.js',
 		'app/libs/slick-carousel/slick/slick.js',
 		'app/js/common.js'
-		// 'app/js/common.min.js'
 		])
-	.pipe(concat('scripts.min.js'))
+	.pipe(concat('scripts.js'))
 	// .pipe(uglify())
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({stream: true}));
@@ -53,7 +52,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function() {
 	return gulp.src('app/sass/**/*.sass')
 	.pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
-	.pipe(rename({suffix: '.min', prefix : ''}))
+	// .pipe(rename({suffix: '.min', prefix : ''}))
 	.pipe(autoprefixer(['last 15 versions']))
 	// .pipe(cleanCSS()) // Опционально, закомментировать при отладке
 	.pipe(gulp.dest('app/css'))
@@ -84,7 +83,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass', 'js'], function() {
 		]).pipe(gulp.dest('dist/css'));
 
 	var buildJs = gulp.src([
-		'app/js/scripts.min.js',
+		'app/js/scripts.js',
 		]).pipe(gulp.dest('dist/js'));
 
 	var buildFonts = gulp.src([
